@@ -6,7 +6,7 @@
   "scripts": {
     "tailwind": "npx tailwindcss -i ./src/style_input.css -o ./src/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./src/style_input.css -o ./src/style.css --minify && npx @11ty/eleventy && exit 1"
+    "build": "tailwindcss -i ./src/style_input.css -o ./src/style.css --minify && npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
