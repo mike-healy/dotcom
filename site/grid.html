@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="robots" content="noindex">
+
+    <title>Grid Layout test</title>
+
+    <link href="/src/style.css" type="text/css" rel="stylesheet">
+</head>
+<body class="p-0 bg-slate-900 text-slate-400">
+    <div class="flex flex-col min-h-screen pt-8 md:pt-12">
+        <main class="flex-1 px-4 md:px-0 md:grid grid-cols-[1fr,46rem,1fr]">
+
+            <div class="col-start-2">
+                <h1 class="text-2xl underline mb-4">
+                    <img src="/src/logo.svg" alt="mike healy" width="100">
+                </h1>
+
+                <p class="mb-12"><a href="/" class="text-blue-500 underline">&larr; home</a></p>
+
+                <h2 class="text-lg mb-1">What happens when this section gets taller?</h2>
+                <div class="bg-slate-950 min-h-28 p-4 my-8">
+                    <ul class="space-y-1">
+                        <li>Want a middle column, up to 72rem wide.</li>
+                        <li>Stack on smaller screens.</li>
+                        <li>Full width sections that can overflow</li>
+                    </ul>
+                </div>
+                <p class="mb-4">It pushes the grid row down. Makes sense.</p>
+            </div>
+
+            <!-- full width -->
+            <div class="-mx-4 sm:-mx-0 col-span-3 sm:grid grid-cols-[1fr,48rem,1fr] bg-gray-800 text-orange-300 p-8">
+                <div class="text-center">gutter</div>
+                <div class="bg-[#f18b69] text-slate-800 h-48 p-4">
+                    <h3 class="mb-4">content area. Aligns with &lt;main&gt;</h3>
+                    <ul>
+                        <li>How to I get reusable components?</li>
+                        <li>Would Laravel Blade make that and sprinkles of dynamic content easier?</li>
+                        <li>…Probably, but then hosting is more complex.</li>
+                    </ul>
+                </div>
+                <div class="text-center">gutter</div>
+            </div>
+
+        </main> <!-- /grid container -->
+
+        <footer class="p-8 bg-[#ed6437] text-slate-800">
+            &copy; 1970 THE GRID SYSTEM.
+        </footer>
+    </div>
+</body>
+</html>
