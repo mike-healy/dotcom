@@ -1,11 +1,7 @@
 module.exports = {
   render(data) {
 
-    const copyYear = (from = 2024) => {
-      const y = new Date().getFullYear()
-
-      return y > from ? `${from} &ndash; ${y}` : from
-    }
+    const copyYear = () => new Date().getFullYear();
 
     return `<!DOCTYPE html>
     <html lang="en">
@@ -14,7 +10,7 @@ module.exports = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>${data.title}</title>
     
-        <link href="/src/style.css?v=2.3" type="text/css" rel="stylesheet">
+        <link href="/src/style.css?v=2.4" type="text/css" rel="stylesheet">
     </head>
     <body class="p-0 bg-slate-900 text-slate-400">
       <div class="flex flex-col min-h-screen pt-12">
@@ -29,7 +25,7 @@ module.exports = {
 
         </main>
         <footer class="p-8 bg-[#ed6437] text-slate-800">
-          &copy; ${copyYear()}
+          it is ${copyYear()}
         </footer>
       </div>
     </body>
